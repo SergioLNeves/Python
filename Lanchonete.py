@@ -1,38 +1,53 @@
-print('Bem Vindo a Lanchonete de Sérgio Luiz Neves Rodrigues')
 x = 0
-while True:
-    print('*' * 22 + 'Cardápio' + '*' * 23)
-    print('|Código|' + ' ' * 10 + '- Descrição - ' + ' ' * 10 + '|Valor(R$)|')
-    print('|  100 |' + ' ' * 8 + '- Cachorro-Quente - ' + ' ' * 6 + '|   9,00  |')
-    print('|  101 |' + ' ' * 6 + '- Cachorro-Quente Duplo - ' + ' ' * 2 + '|  11,00  |')
-    print('|  102 |' + ' ' * 12 + '- X-Egg - ' + ' ' * 12 + '|  12,00  |')
-    print('|  103 |' + ' ' * 10 + '- X-Salada - ' + ' ' * 11 + '|  13,00  |')
-    print('|  104 |' + ' ' * 11 + '- X-Bacon - ' + ' ' * 11 + '|  14,00  |')
-    print('|  105 |' + ' ' * 11 + '- X-Tudo - ' + ' ' * 12 + '|  17,00  |')
-    print('|  200 |' + ' ' * 6 + '- Refrigerante Lata - ' + ' ' * 6 + '|   5,00  |')
-    print('|  201 |' + ' ' * 9 + '- Chá Gelado - ' + ' ' * 10 + '|   4,00  |')
+print('Bem Vindo a Lanchonete de Sérgio Luiz Neves Rodrigues')
+print('*' * 22 + 'Cardápio' + '*' * 23)
+print('|Código|' + ' ' * 10 + '- Descrição - ' + ' ' * 10 + '|Valor(R$)|')
+print('|  100 |' + ' ' * 8 + '- Cachorro-Quente - ' + ' ' * 6 + '|   9,00  |')
+print('|  101 |' + ' ' * 6 + '- Cachorro-Quente Duplo - ' + ' ' * 2 + '|  11,00  |')
+print('|  102 |' + ' ' * 12 + '- X-Egg - ' + ' ' * 12 + '|  12,00  |')
+print('|  103 |' + ' ' * 10 + '- X-Salada - ' + ' ' * 11 + '|  13,00  |')
+print('|  104 |' + ' ' * 11 + '- X-Bacon - ' + ' ' * 11 + '|  14,00  |')
+print('|  105 |' + ' ' * 11 + '- X-Tudo - ' + ' ' * 12 + '|  17,00  |')
+print('|  200 |' + ' ' * 6 + '- Refrigerante Lata - ' + ' ' * 6 + '|   5,00  |')
+print('|  201 |' + ' ' * 9 + '- Chá Gelado - ' + ' ' * 10 + '|   4,00  |')
 
-    y = int(input('insira o código do produto '))
+while True:
+    y = input('insira o código do produto ')
 
     if y == '100':
-      x += 9.00
-      print('você escolheu frango por 9 reais')
+        print('Cachorro Quente de 9 Reais adicionado na lista')
+        valor = 9.00
+        x += valor
     elif y == '101':
-      x += 11.00
+        print('Cachorro Quente Duplo de 11 Reais adicionado na lista')
+        valor = 11.00
+        x += valor
     elif y == '102':
-      x += 12.00
+        print('X-Egg de 12 Reais adicionado na lista')
+        valor = 12.00
+        x += valor
     elif y == '103':
-      x += 13.00
+        print('X-Salada de 13 Reais adicionado na lista')
+        valor = 13.00
+        x += valor
     elif y == '104':
-      x += 14.00
+        print('X-Bacon de 14 Reais adicionado na lista')
+        valor = 14.00
+        x += valor
     elif y == '105':
-      x += 17.00
+        print('X-Tudo de 17 Reais adicionado na lista')
+        valor = 17.00
+        x += valor
     elif y == '200':
-      x += 5.00
+        print('Refrigerante Lata de 5 Reais adicionado na lista')
+        valor = 5.00
+        x += valor
     elif y == '201':
-      x += 4.00
+        print('Chá Gelado de 4 Reais adicionado na lista')
+        valor = 4.00
+        x += valor
     else:
-        print('Opção inválida')
+        print('Código inválida')
         continue
     print('deseja pedir mais alguma coisa?')
     print('1 - sim')
@@ -41,5 +56,6 @@ while True:
     if c == '1' or c == 'sim':
         continue
     else:
+        print('Total a ser pago é de {:.2f} Reais'.format(x))
+        print('Obrigado por comprar na lanchonete do Sérgio, Volte Sempre')
         break
-        print('Total a ser pago foi de {}' .format(x))
